@@ -1,0 +1,20 @@
+def factorial(n):
+    """
+    Calculates the factorial of a non-negative integer using recursion.
+    """
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+if __name__ == "__main__":
+    try:
+        user_input = input("Enter a non-negative integer: ")
+        number = int(user_input)
+        if number < 0:
+            print("Factorial is not defined for negative numbers.")
+        else:
+            result = factorial(number)
+            print(f"The factorial of {number} is: {result}")
+    except ValueError:
+        print("Invalid input. Please enter an integer.")
